@@ -6,6 +6,8 @@ A website for **Kayla**, founder of Kayla & Bloom — a student-run floral studi
 
 Built from `PROPOSAL.md` → `PRD.md` → a hand-drawn sketch in `sketch/`, as six pages (Home, About, Menu, Subscriptions, Custom, Contact) sharing one nav and one stylesheet.
 
+Kayla & Bloom is a real client of Ivy Devs, my own web development business — my professor approved using this existing case for the assignment. The interview in `PROPOSAL.md` is a scoping call for that engagement, not one held from scratch for this course; where that leaves a gap (inspiration sites, direct confirmation from Kayla on this specific rebuild), `PROPOSAL.md` and `PRD.md` say so directly instead of papering over it.
+
 ## The required question
 
 **Pick one piece of AI output you did not accept as-is. What did it give you, what did you change, and how did you know it needed changing? Point at the commit.**
