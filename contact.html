@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayla &amp; Bloom | Contact</title>
+  <meta name="description" content="Send an inquiry to Kayla & Bloom for a standard order, monthly subscription, or custom event.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <a href="index.html" class="logo">Kayla &amp; Bloom</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact" id="contact">
+      <div class="contact-intro">
+        <img src="images/swans-pair.png" alt="Two hand-drawn swans">
+        <h2>Say Hello</h2>
+        <p>One little form for every kind of inquiry — orders, subscriptions, and custom events. I'll reply to confirm details and delivery or pickup.</p>
+      </div>
+
+      <form class="inquiry" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-row">
+          <label for="name">Name
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </label>
+          <label for="email">Email
+            <input type="email" id="email" name="email" placeholder="you@school.edu" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="inquiry-type">Inquiry type
+            <select id="inquiry-type" name="inquiry-type" required>
+              <option value="">Select one</option>
+              <option>Standard order</option>
+              <option>Monthly subscription</option>
+              <option>Custom or large event</option>
+            </select>
+          </label>
+          <label for="date-needed">Date needed
+            <input type="date" id="date-needed" name="date-needed">
+          </label>
+        </div>
+
+        <label for="notes">Notes &amp; vision
+          <textarea id="notes" name="notes" rows="4" placeholder="Colors, occasion, room, budget — anything you're dreaming of."></textarea>
+        </label>
+
+        <div class="submit-row">
+          <button type="submit" class="btn">Send Inquiry</button>
+          <span class="form-note">I'll reply within a day or two to confirm details.</span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="images/swan.png" alt="">
+    <span class="brand">Kayla &amp; Bloom</span>
+    <a href="https://instagram.com/kaylaandbloom" target="_blank" rel="noopener">@kaylaandbloom on Instagram</a>
+    <span class="thanks">thank you for supporting my small business <img src="images/heart-only.png" alt=""></span>
+  </footer>
+</body>
+</html>
