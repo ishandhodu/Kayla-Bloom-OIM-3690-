@@ -49,6 +49,47 @@ img {
   display: block;
 }
 
+/* ---------- Motion ---------- */
+
+@keyframes kbFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes kbTwinkle {
+  0%, 100% { opacity: .5; transform: scale(.9); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.float {
+  animation: kbFloat 8s ease-in-out infinite;
+}
+
+.sparkle {
+  display: inline-block;
+  animation: kbTwinkle 3.2s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 h1, h2, h3 {
   font-family: var(--font-heading);
   font-weight: 400;
@@ -92,9 +133,35 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+.nav-links a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 .nav-links a[aria-current="page"] {
   color: var(--color-accent-text);
-  border-bottom: 1px solid var(--color-accent-text);
+}
+
+.nav-links a[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 /* ---------- Layout helpers ---------- */
@@ -110,7 +177,21 @@ section {
 }
 
 section + section {
+  position: relative;
   border-top: 1px solid var(--color-border);
+}
+
+section + section::before {
+  content: "♥";
+  position: absolute;
+  top: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-bg);
+  padding: 0 14px;
+  color: var(--color-border);
+  font-size: 14px;
+  line-height: 1;
 }
 
 .section-heading {
@@ -154,7 +235,7 @@ section + section {
   letter-spacing: .24em;
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
-  transition: background .2s, border-color .2s;
+  transition: background .2s, border-color .2s, transform .2s;
   cursor: pointer;
 }
 
@@ -163,6 +244,7 @@ section + section {
   background: var(--color-accent-text);
   border-color: var(--color-accent-text);
   color: var(--color-bg);
+  transform: translateY(-2px);
 }
 
 /* ---------- Hero (Home page) ---------- */
@@ -282,6 +364,12 @@ section + section {
 
 .menu-card:hover {
   transform: translateY(-4px);
+}
+
+.menu-card--featured {
+  background: rgba(255, 255, 255, .85);
+  border-color: var(--color-accent-text);
+  box-shadow: 0 14px 36px rgba(194, 104, 125, .14);
 }
 
 .menu-card img {
@@ -431,6 +519,11 @@ section + section {
   flex-direction: column;
   gap: 22px;
   align-items: center;
+}
+
+.custom .heart-divider {
+  height: 24px;
+  width: auto;
 }
 
 .custom h1 {
