@@ -59,5 +59,5 @@ Nav is identical on all 6 pages: About · Menu · Subscriptions · Custom · Con
 
 1. Real bouquet photography from Kayla, replacing illustrated motifs on `menu.html`/`subscriptions.html`.
 2. Wire the contact form to a real backend (Formspree or similar) so inquiries actually reach Kayla.
-3. Get Kayla's direct sign-off on this rebuilt version (the original interview was a scoping call for the separate paid engagement, not a from-scratch client interview for this specific rebuild).
-4. Show Kayla 3–5 comparable florist/small-business sites and record her reactions — the "inspiration sites" step the initial interview skipped.
+3. ~~Get Kayla's direct sign-off on this rebuilt version~~ — **done**, see `FEEDBACK.md` (Sep 27). No changes requested; she approved the design and structure as built.
+4. Kayla's inspiration site is now identified (Fleuri Designs, see `PROPOSAL.md`), but what specifically she likes about it hasn't been pinned down — still worth a quick follow-up rather than guessing, and worth seeing a couple more comparable sites beyond just the one.
