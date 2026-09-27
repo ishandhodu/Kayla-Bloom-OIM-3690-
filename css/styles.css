@@ -684,11 +684,21 @@ form.inquiry {
 @media (max-width: 600px) {
   .site-header nav {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     gap: 14px;
   }
 
+  .logo {
+    text-align: center;
+  }
+
   .nav-links {
+    width: 100%;
+    min-width: 0;
     justify-content: center;
+    gap: 10px 18px;
+    font-size: 13px;
   }
 
   .hero-copy,
