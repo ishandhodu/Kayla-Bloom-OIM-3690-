@@ -23,5 +23,5 @@ The fix, in `efe8dd3`: split `about.html` and `subscriptions.html` out into thei
 ## Notes
 
 - Kayla reviewed the deployed site and gave feedback on Sep 27 — see `FEEDBACK.md`. No changes requested; she approved the design and structure as built.
-- The contact form (`contact.html`) is intentionally **not** wired to a real backend yet — it's labeled "not yet connected" rather than pointing at a fake endpoint, so it fails honestly instead of silently. See `PRD.md`'s "Open follow-ups" for what's left after this course deliverable.
+- The contact form (`contact.html`) works: submitting builds a pre-filled email from the form fields and opens the visitor's email app via `js/main.js`, no backend needed. The recipient address is a deliberate placeholder (`KAYLA_EMAIL` in `js/main.js`), not an oversight — this is a public repo for a course assignment, and a real person's email address doesn't belong hardcoded in public client-side source.
 - Product photography is currently the approved brand illustration set (swans, florals), not real photos of Kayla's bouquets — also called out in `PRD.md`.

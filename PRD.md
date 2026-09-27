@@ -20,7 +20,7 @@ A 6-page static site for Kayla & Bloom, a student-run floral studio, so customer
 - Wedding & events growth roadmap content
 - SEO blog content
 - A lead/order dashboard
-- A working form backend (see Open follow-ups)
+- A server-side form backend (Formspree, etc.) — the mailto approach below covers the requirement without one
 
 These map to the Recommended/Premium tiers of the separate Ivy Devs paid engagement and are intentionally not part of the course build.
 
@@ -47,7 +47,7 @@ Nav is identical on all 6 pages: About · Menu · Subscriptions · Custom · Con
 
 - All pages responsive down to phone width (single-column collapse under 600px).
 - Contact form uses native HTML validation (`required`, `type="email"`, `type="date"`) — no JS validation needed.
-- Contact form does **not** silently fail: since it isn't wired to a real backend yet, it's explicitly labeled "not yet connected" with an alternate contact path (Instagram), rather than pointing at a fake endpoint.
+- Contact form is real: `js/main.js` builds a pre-filled email from the field values and opens it in the visitor's mail app on submit. No backend, no account, no dead endpoint. The recipient address is intentionally a placeholder (see Open follow-ups) — not hardcoding a real person's email in public client-side source.
 
 ## Success criteria
 
@@ -58,6 +58,6 @@ Nav is identical on all 6 pages: About · Menu · Subscriptions · Custom · Con
 ## Open follow-ups (after Tuesday, not blocking)
 
 1. Real bouquet photography from Kayla, replacing illustrated motifs on `menu.html`/`subscriptions.html`.
-2. Wire the contact form to a real backend (Formspree or similar) so inquiries actually reach Kayla.
+2. Set Kayla's real email into `KAYLA_EMAIL` in `js/main.js` — deliberately left as a placeholder in this repo (see Notes in `README.md`), not something to fix here, since it's a real person's address in a public course-assignment repo. Whoever operates the site day-to-day sets it locally.
 3. ~~Get Kayla's direct sign-off on this rebuilt version~~ — **done**, see `FEEDBACK.md` (Sep 27). No changes requested; she approved the design and structure as built.
 4. Kayla's inspiration site is now identified (Fleuri Designs, see `PROPOSAL.md`), but what specifically she likes about it hasn't been pinned down — still worth a quick follow-up rather than guessing, and worth seeing a couple more comparable sites beyond just the one.

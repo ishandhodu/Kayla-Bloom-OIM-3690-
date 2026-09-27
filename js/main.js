@@ -27,7 +27,11 @@
   var form = document.getElementById('contact-form');
   if (!form) return;
 
-  // TODO: replace with Kayla's real email address before this is truly "live."
+  // Intentionally a placeholder, not a TODO: this is a public repo for a
+  // course assignment, and a real person's email doesn't belong hardcoded
+  // in public client-side source (spam harvesting, no way to revoke it).
+  // Kayla would set her real address here herself outside of this
+  // repo's history if this ever became her actual production site.
   var KAYLA_EMAIL = 'kaylaandbloom@example.com';
 
   form.addEventListener('submit', function (event) {
