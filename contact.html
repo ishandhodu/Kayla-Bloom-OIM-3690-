@@ -15,8 +15,9 @@
     <nav>
       <a href="index.html" class="logo">Kayla &amp; Bloom</a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <li><a href="subscriptions.html">Subscriptions</a></li>
         <li><a href="custom.html">Custom</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
@@ -31,7 +32,7 @@
         <p>One little form for every kind of inquiry — orders, subscriptions, and custom events. I'll reply to confirm details and delivery or pickup.</p>
       </div>
 
-      <form class="inquiry" action="https://formspree.io/f/your-form-id" method="POST">
+      <form class="inquiry" onsubmit="return false;">
         <div class="form-row">
           <label for="name">Name
             <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -61,7 +62,7 @@
 
         <div class="submit-row">
           <button type="submit" class="btn">Send Inquiry</button>
-          <span class="form-note">I'll reply within a day or two to confirm details.</span>
+          <span class="form-note">Form not yet connected — for now, message @kaylaandbloom on Instagram or email directly.</span>
         </div>
       </form>
     </section>
