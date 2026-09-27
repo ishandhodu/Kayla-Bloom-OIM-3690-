@@ -32,12 +32,12 @@
   <main>
     <section class="contact" id="contact">
       <div class="contact-intro">
-        <img src="images/swans-pair.png" alt="Two hand-drawn swans">
+        <img src="images/swans-pair.png" alt="Two hand-drawn swans" width="700" height="447" loading="lazy">
         <h1>Say Hello</h1>
         <p>One little form for every kind of inquiry — orders, subscriptions, and custom events. I'll reply to confirm details and delivery or pickup.</p>
       </div>
 
-      <form class="inquiry" onsubmit="return false;">
+      <form class="inquiry" id="contact-form">
         <div class="form-row">
           <label for="name">Name
             <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -67,17 +67,18 @@
 
         <div class="submit-row">
           <button type="submit" class="btn">Send Inquiry</button>
-          <span class="form-note">Form not yet connected — for now, message @kaylaandbloom on Instagram or email directly.</span>
+          <span class="form-note">Submitting opens your email app with everything filled in — just hit send there to finish.</span>
         </div>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <img src="images/swan.png" alt="">
+    <img src="images/swan.png" alt="" width="320" height="190" loading="lazy">
     <span class="brand">Kayla &amp; Bloom</span>
     <a href="https://instagram.com/kaylaandbloom" target="_blank" rel="noopener">@kaylaandbloom on Instagram</a>
-    <span class="thanks">thank you for supporting my small business <img src="images/heart-only.png" alt=""></span>
+    <span class="thanks">thank you for supporting my small business <img src="images/heart-only.png" alt="" width="136" height="160" loading="lazy"></span>
   </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
